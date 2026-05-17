@@ -6,44 +6,35 @@ function NameThatTuneDeluxe() {
   const categories = [
     {
       name: "Movie Hits",
-      songs: ["Saturday Night Fever and The Bee Gees", "Rocky III and Survivor", "Risky Business Bob Seger", "Beaches and Bette Midler", "Caddyshack and Kenny Loggins"],
+      songs: ["Stayin' Alive", "Eye of the Tiger", "Old Time Rock n Roll", "Wind Beneath My Wings", "I'm Alright"],
     },
     {
       name: "5 Second Rule",
-      songs: ["Margaritaville by Jimmy Buffet", "Jump by Van Halen", "Hey There Delilah by  Plain White Ts", "Summer of '69 by Brian Adams", "Spirit in the Sky by Norman Greenbaum"],
+      songs: ["Margaritaville", "Jump", "Hey There Delilah", "Summer of '69", "Spirit in the Sky"],
     },
     {
       name: "Top Ten??",
-      songs: ["Fireflies by Owl City #1 in 2009", "Breakfast at Tiffany's by Deep Blue Something #5 in 1995", "Informer by Snow #3 in 1993 ", "Thong Song by Sisqo #3 in 2000", "Lips of an Angel by Hinder #3 in 2006"],
+      songs: ["Fireflies", "Breakfast at Tiffany's", "Informer", "Thong Song", "Lips of an Angel"],
     },
     {
       name: "Celebrities",
-      songs: ["I'm Just Ken sung by Ryan Gosling", "Good Vibrations sung by Mark Wahlberg", "Party All the Time sung by Eddie Murphy", "Heartbeat sung by Don Johnson", "Respect Yourself sung by bruce Willis"],
+      songs: ["I'm Just Ken", "Good Vibrations", "Party All the Time", "Heartbeat", "Respect Yourself"],
     },
     {
       name: "Today's Hits",
-      songs: ["A Bar Song by Shaboozey", "Fortnight by Taylor Swift and Post Malone", "Choosin' Texas by Ella Langley", "Espresso by Sabrina Carpenter", "Good Luck, Babe! by Chappell Roan"],
+      songs: ["A Bar Song", "Fortnight", "Choosin' Texas", "Espresso", "Good Luck, Babe!"],
     },
     {
       name: "Ham's Jams",
-      songs: ["Wild Thing by Tone Loc", "Friends in Low Places by Garth Brooks", "In da Club by 50 cent", "Brown eyed girl by Van Morrison", "It Wasn't Me by Shaggy"],
+      songs: ["Wild Thing", "Friends in Low Places", "In da Club", "It's Five O'Clock Somewhere", "It Wasn't Me"],
     },
   ];
 
   const [selected, setSelected] = useState(null);
   const [revealed, setRevealed] = useState(false);
   const [used, setUsed] = useState({});
-  const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
-  const [teamNames, setTeamNames] = useState([
-    "Team 1",
-    "Team 2",
-    "Team 3",
-    "Team 4",
-    "Team 5",
-    "Team 6",
-    "Team 7",
-    "Team 8",
-  ]);
+  const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+  const [teamNames, setTeamNames] = useState(["Team 1","Team 2","Team 3","Team 4","Team 5","Team 6","Team 7","Team 8","Team 9","Team 10"]);
 
   const openClue = (category, song, value, key) => {
     setSelected({ category, song, value, key });
@@ -51,7 +42,36 @@ function NameThatTuneDeluxe() {
   };
 
   const backToBoard = () => {
-    if (selected) {
+    if (showFinal) {
+    return (
+      <div className="page clue-page">
+        <div className="top-center">
+          <div className="badge">Final Jeopardy • Movie Themes</div>
+          <h1>FINAL JEOPARDY</h1>
+          <p>Play the song on your separate audio device, then reveal the answer.</p>
+        </div>
+        <div className="clue-card">
+          <div className="audio-box">
+            <h2>PLAY AUDIO CLIP</h2>
+            <div className="muted">Final Jeopardy clue</div>
+          </div>
+          {!revealed ? (
+            <button onClick={() => setRevealed(true)} className="big-button">Reveal Answer</button>
+          ) : (
+            <div className="answer-box">
+              <div className="answer-label">Correct Answer</div>
+              <div className="answer-text">Pirates of the Caribbean</div>
+            </div>
+          )}
+        </div>
+        <div className="bottom-actions">
+          <button onClick={() => {setShowFinal(false); setRevealed(false);}} className="big-button secondary">Back to Board</button>
+        </div>
+      </div>
+    );
+  }
+
+  if (selected) {
       setUsed((prev) => ({ ...prev, [selected.key]: true }));
     }
     setSelected(null);
@@ -60,6 +80,30 @@ function NameThatTuneDeluxe() {
 
   const adjustScore = (teamIndex, amount) => {
     setScores((prev) => prev.map((score, i) => (i === teamIndex ? score + amount : score)));
+  };
+
+  const [timeLeft, setTimeLeft] = useState(30);
+  const [timerRunning, setTimerRunning] = useState(false);
+  const [showFinal, setShowFinal] = useState(false);
+
+  const startTimer = () => {
+    if (timerRunning) return;
+    setTimerRunning(true);
+    const interval = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(interval);
+          setTimerRunning(false);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+  };
+
+  const resetTimer = () => {
+    setTimerRunning(false);
+    setTimeLeft(30);
   };
 
   const resetGame = () => {
@@ -169,9 +213,14 @@ function NameThatTuneDeluxe() {
       </div>
 
       <div className="feature-row">
-        <div>Daily Double Placeholder</div>
-        <div>Final Jeopardy Placeholder</div>
-        <div>Timer Placeholder</div>
+        <div onClick={() => {setShowFinal(true); setRevealed(false);}} style={{cursor:"pointer"}}>Final Jeopardy</div>
+        <div>
+          <div>Timer: {timeLeft}s</div>
+          <div style={{marginTop:"10px", display:"flex", gap:"8px", justifyContent:"center"}}>
+            <button onClick={startTimer} className="reset-button">Start</button>
+            <button onClick={resetTimer} className="reset-button">Reset</button>
+          </div>
+        </div>
       </div>
 
       <div className="bottom-actions">
