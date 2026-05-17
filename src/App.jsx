@@ -6,8 +6,7 @@ function NameThatTuneDeluxe() {
   const categories = [
     {
       name: "Movie Hits",
-      songs: ["Saturday Night Fever and The Bee Gees", "Rocky III and Survivor
-              Survivor", "Risky Business Bob Seger", "Beaches and Bette Midler", "Caddyshack and Kenny Loggins"],
+      songs: ["Saturday Night Fever and The Bee Gees", "Rocky III and Survivor", "Risky Business Bob Seger", "Beaches and Bette Midler", "Caddyshack and Kenny Loggins"],
     },
     {
       name: "5 Second Rule",
