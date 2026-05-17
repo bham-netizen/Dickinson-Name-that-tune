@@ -81,7 +81,7 @@ function NameThatTuneDeluxe() {
         <div className="clue-card">
           <div className="audio-box">
             <h2>PLAY AUDIO CLIP</h2>
-            <div className="muted">Final Jeopardy clue</div>
+            <div className="muted">Category: Movie Themes</div>
           </div>
           {!revealed ? (
             <button onClick={() => setRevealed(true)} className="big-button">Reveal Answer</button>
@@ -121,7 +121,7 @@ function NameThatTuneDeluxe() {
             </div>
           )}
         </div>
-        <div className="score-grid clue-score-grid">
+        <div className="score-grid clue-score-grid five-team-grid">
           {teamNames.map((team, i) => (
             <div key={`${team}-${i}`} className="score-card">
               <div className="team-name-static">{team}</div>
@@ -177,19 +177,21 @@ function NameThatTuneDeluxe() {
         ))}
       </div>
 
-      <div className="feature-row two-feature-row">
-        <div onClick={() => { setShowFinal(true); setRevealed(false); }} style={{ cursor: "pointer" }}>Final Jeopardy</div>
+      <div className="feature-row three-feature-row">
+        <div onClick={() => { setShowFinal(true); setRevealed(false); }} style={{ cursor: "pointer" }}>
+          <div>Final Jeopardy</div>
+          <div style={{ fontSize: "26px", marginTop: "10px" }}>Movie Themes</div>
+        </div>
         <div>
           <div>Timer: {timeLeft}s</div>
           <div style={{ marginTop: "10px", display: "flex", gap: "8px", justifyContent: "center" }}>
-            <button onClick={toggleTimer} className="reset-button">{timerRunning ? "Pause" : "Start"}</button>
-            <button onClick={resetTimer} className="reset-button">Reset</button>
+            <button onClick={toggleTimer} className="timer-button">{timerRunning ? "Pause" : "Start"}</button>
+            <button onClick={resetTimer} className="timer-button">Reset</button>
           </div>
         </div>
-      </div>
-
-      <div className="bottom-actions">
-        <button onClick={resetGame} className="reset-button">Reset Game</button>
+        <div onClick={resetGame} style={{ cursor: "pointer" }}>
+          <div>Reset Game</div>
+        </div>
       </div>
     </div>
   );
