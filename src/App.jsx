@@ -6,7 +6,7 @@ function NameThatTuneDeluxe() {
   const categories = [
     {
       name: "Movie Hits",
-      songs: ["Stayin' Alive", "Eye of the Tiger", "Old Time Rock n Roll", "Wind Beneath My Wings", "I'm Alright"],
+      songs: ["Saturday Night Fever by the Bee Gees", "Eye of the Tiger", "Old Time Rock n Roll", "Wind Beneath My Wings", "I'm Alright"],
     },
     {
       name: "5 Second Rule",
