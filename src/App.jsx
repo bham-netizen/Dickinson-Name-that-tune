@@ -15,8 +15,8 @@ function NameThatTuneDeluxe() {
   const [selected, setSelected] = useState(null);
   const [revealed, setRevealed] = useState(false);
   const [used, setUsed] = useState({});
-  const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
-  const [teamNames, setTeamNames] = useState(["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9", "Team 10"]);
+  const [scores, setScores] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+  const [teamNames, setTeamNames] = useState(["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9", "Team 10", "Team 11", "Team 12"]);
   const [timeLeft, setTimeLeft] = useState(30);
   const [timerRunning, setTimerRunning] = useState(false);
   const [showFinal, setShowFinal] = useState(false);
@@ -64,7 +64,7 @@ function NameThatTuneDeluxe() {
     const sure = window.confirm("Reset used clues and scores?");
     if (!sure) return;
     setUsed({});
-    setScores([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+    setScores([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
     setSelected(null);
     setRevealed(false);
     resetTimer();
