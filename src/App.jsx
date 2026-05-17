@@ -10,23 +10,23 @@ function NameThatTuneDeluxe() {
     },
     {
       name: "5 Second Rule",
-      songs: ["Margaritaville", "Jump", "Hey There Delilah", "Summer of '69", "Spirit in the Sky"],
+      songs: ["Margaritaville by Jimmy Buffet", "Jump by Van Halen", "Hey There Delilah by  Plain White Ts", "Summer of '69 by Brian Adams", "Spirit in the Sky by Norman Greenbaum"],
     },
     {
       name: "Top Ten??",
-      songs: ["Fireflies", "Breakfast at Tiffany's", "Informer", "Thong Song", "Lips of an Angel"],
+      songs: ["Fireflies by Owl City #1 in 2009", "Breakfast at Tiffany's by Deep Blue Something #5 in 1995", "Informer by Snow #3 in 1993 ", "Thong Song by Sisqo #3 in 2000", "Lips of an Angel by Hinder #3 in 2006"],
     },
     {
       name: "Celebrities",
-      songs: ["I'm Just Ken", "Good Vibrations", "Party All the Time", "Heartbeat", "Respect Yourself"],
+      songs: ["I'm Just Ken sung by Ryan Gosling", "Good Vibrations sung by Mark Wahlberg", "Party All the Time sung by Eddie Murphy", "Heartbeat sung by Don Johnson", "Respect Yourself sung by bruce Willis"],
     },
     {
       name: "Today's Hits",
-      songs: ["A Bar Song", "Fortnight", "Choosin' Texas", "Espresso", "Good Luck, Babe!"],
+      songs: ["A Bar Song by Shaboozey", "Fortnight by Taylor Swift and Post Malone", "Choosin' Texas by Ella Langley", "Espresso by Sabrina Carpenter", "Good Luck, Babe! by Chappell Roan"],
     },
     {
       name: "Ham's Jams",
-      songs: ["Wild Thing", "Friends in Low Places", "In da Club", "It's Five O'Clock Somewhere", "It Wasn't Me"],
+      songs: ["Wild Thing by Tone Loc", "Friends in Low Places by Garth Brooks", "In da Club by 50 cent", "Brown eyed girl by Van Morrison", "It Wasn't Me by Shaggy"],
     },
   ];
 
