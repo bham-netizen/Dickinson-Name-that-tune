@@ -4,12 +4,12 @@ import "./style.css";
 
 function NameThatTuneDeluxe() {
   const categories = [
-    { name: "Movie Hits", songs: ["Stayin' Alive", "Eye of the Tiger", "Old Time Rock n Roll", "Wind Beneath My Wings", "I'm Alright"] },
-    { name: "5 Second Rule", songs: ["Margaritaville", "Jump", "Hey There Delilah", "Summer of '69", "Spirit in the Sky"] },
-    { name: "Top Ten??", songs: ["Fireflies", "Breakfast at Tiffany's", "Informer", "Thong Song", "Lips of an Angel"] },
-    { name: "Celebrities", songs: ["I'm Just Ken", "Good Vibrations", "Party All the Time", "Heartbeat", "Respect Yourself"] },
-    { name: "Today's Hits", songs: ["A Bar Song", "Fortnight", "Choosin' Texas", "Espresso", "Good Luck, Babe!"] },
-    { name: "Ham's Jams", songs: ["Wild Thing", "Friends in Low Places", "In da Club", "It's Five O'Clock Somewhere", "It Wasn't Me"] },
+    { name: "Movie Hits", songs: ["Saturday Night Fever by the Bee Gees", "Rocky III by Survivor", "Risky Business by Bob Seger", "Beaches by Bette Midler", "Caddyshack by Kenny Loggins"] },
+    { name: "5 Second Rule", songs: ["Margaritaville by Jimmy Buffet", "Jump by Van Halen", "Hey There Delilah by Plain White Ts", "Summer of '69 by Bryan Adams", "Spirit in the Sky by Norman Greenbaum"] },
+    { name: "Top Ten??", songs: ["Fireflies by Owl City #1 in 2009", "Breakfast at Tiffany's by Deep Blue Something #5 in 1995", "Informer by Snoa #3 in 1993", "Thong Song by Sisqo #3 in 2000", "Lips of an Angel by Hinder #3 in 2006"] },
+    { name: "Celebrities", songs: ["I'm Just Ken sung by Ryan Gosling", "Good Vibrations sung by Mark Wahlberg", "Party All the Time sung by Eddie Murphy", "Heartbeat sung by Don Johnson", "Respect Yourself sung by Bruce Willis"] },
+    { name: "Today's Hits", songs: ["A Bar Song by Shaboozy", "Fortnight by Taylor Swift and Post Malone", "Choosin' Texas by Ella Langley", "Espresso by Sabrina Carpenter", "Good Luck, Babe! by Chappell Roan"] },
+    { name: "Ham's Jams", songs: ["Wild Thing by Tone Loc", "Friends in Low Places by Garth Brooks", "In da Club by 50 cent", "Brown eyed Girl by Van Morrison", "It Wasn't Me by Shaggy"] },
   ];
 
   const [selected, setSelected] = useState(null);
