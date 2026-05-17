@@ -4,7 +4,7 @@ import "./style.css";
 
 function NameThatTuneDeluxe() {
   const categories = [
-    { name: "Movie Hits", songs: ["Saturday Night Fever by the Bee Gees", "Rocky III by Survivor", "Risky Business by Bob Seger", "Beaches by Bette Midler", "Caddyshack by Kenny Loggins"] },
+    { name: "Movie Hits", songs: ["Saturday Night Fever/the Bee Gees", "Rocky III/Survivor", "Risky Business/Bob Seger", "Beaches/Bette Midler", "Caddyshack/Kenny Loggins"] },
     { name: "5 Second Rule", songs: ["Margaritaville by Jimmy Buffet", "Jump by Van Halen", "Hey There Delilah by Plain White Ts", "Summer of '69 by Bryan Adams", "Spirit in the Sky by Norman Greenbaum"] },
     { name: "Top Ten??", songs: ["Fireflies by Owl City #1 in 2009", "Breakfast at Tiffany's by Deep Blue Something #5 in 1995", "Informer by Snoa #3 in 1993", "Thong Song by Sisqo #3 in 2000", "Lips of an Angel by Hinder #3 in 2006"] },
     { name: "Celebrities", songs: ["I'm Just Ken sung by Ryan Gosling", "Good Vibrations sung by Mark Wahlberg", "Party All the Time sung by Eddie Murphy", "Heartbeat sung by Don Johnson", "Respect Yourself sung by Bruce Willis"] },
