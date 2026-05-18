@@ -9,7 +9,7 @@ function NameThatTuneDeluxe() {
     { name: "Top Ten??", songs: ["Fireflies by Owl City #1 in 2009", "Breakfast at Tiffany's by Deep Blue Something #5 in 1995", "Informer by Snoa #3 in 1993", "Thong Song by Sisqo #3 in 2000", "Lips of an Angel by Hinder #3 in 2006"] },
     { name: "Celebrities", songs: ["I'm Just Ken sung by Ryan Gosling", "Good Vibrations sung by Mark Wahlberg", "Party All the Time sung by Eddie Murphy", "Heartbeat sung by Don Johnson", "Respect Yourself sung by Bruce Willis"] },
     { name: "Today's Hits", songs: ["A Bar Song by Shaboozy", "Fortnight by Taylor Swift and Post Malone", "Choosin' Texas by Ella Langley", "Espresso by Sabrina Carpenter", "Good Luck, Babe! by Chappell Roan"] },
-    { name: "Ham's Jams", songs: ["Wild Thing by Tone Loc", "Friends in Low Places by Garth Brooks", "In da Club by 50 cent", "Brown eyed Girl by Van Morrison", "It Wasn't Me by Shaggy"] },
+    { name: "Ham's Jams", songs: ["Wild Thing by Tone Loc", "Friends in Low Places by Garth Brooks", "In da Club by 50 cent", "Brown eyed Girl by Van Morrison", "Toes by Zac Brown Band"] },
   ];
 
   const [selected, setSelected] = useState(null);
